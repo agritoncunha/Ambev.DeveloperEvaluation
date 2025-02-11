@@ -1,10 +1,12 @@
 using Ambev.DeveloperEvaluation.Application;
+using Ambev.DeveloperEvaluation.Application.Events;
 using Ambev.DeveloperEvaluation.Common.HealthChecks;
 using Ambev.DeveloperEvaluation.Common.Logging;
 using Ambev.DeveloperEvaluation.Common.Security;
 using Ambev.DeveloperEvaluation.Common.Validation;
 using Ambev.DeveloperEvaluation.IoC;
 using Ambev.DeveloperEvaluation.ORM;
+using Ambev.DeveloperEvaluation.ORM.Repositories;
 using Ambev.DeveloperEvaluation.WebApi.Middleware;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,8 @@ public class Program
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<SaleService>();
+            builder.Services.AddScoped<ISaleRepository, SaleRepository>();
 
             builder.AddBasicHealthChecks();
             builder.Services.AddSwaggerGen();

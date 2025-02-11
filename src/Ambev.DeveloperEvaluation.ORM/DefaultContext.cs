@@ -22,7 +22,8 @@ public class DefaultContext : DbContext
         base.OnModelCreating(modelBuilder);
     }
 }
-public class YourDbContextFactory : IDesignTimeDbContextFactory<DefaultContext>
+
+public class DefaultContextFactory : IDesignTimeDbContextFactory<DefaultContext>
 {
     public DefaultContext CreateDbContext(string[] args)
     {
@@ -35,8 +36,8 @@ public class YourDbContextFactory : IDesignTimeDbContextFactory<DefaultContext>
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
         builder.UseNpgsql(
-               connectionString,
-               b => b.MigrationsAssembly("Ambev.DeveloperEvaluation.WebApi")
+            connectionString,
+            b => b.MigrationsAssembly("Ambev.DeveloperEvaluation.ORM") // Alterado para "Ambev.DeveloperEvaluation.ORM"
         );
 
         return new DefaultContext(builder.Options);

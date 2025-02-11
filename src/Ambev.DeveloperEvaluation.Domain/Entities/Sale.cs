@@ -8,7 +8,7 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities
 {
     public class Sale
     {
-        public Guid SaleId { get; set; }
+        public int SaleId { get; set; }
         public string SaleNumber { get; set; } = string.Empty;
         public DateTime SaleDate { get; set; }
         public int CustomerId { get; set; }

@@ -39,7 +39,7 @@ namespace Ambev.DeveloperEvaluation.WebApi.Features.Sales
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSale(Guid id, [FromBody] Sale sale)
+        public async Task<IActionResult> UpdateSale(int id, [FromBody] Sale sale)
         {
             if (id != sale.SaleId)
                 return BadRequest("Sale ID mismatch");
