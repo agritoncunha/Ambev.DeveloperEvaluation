@@ -76,26 +76,11 @@ A API de vendas deve seguir as seguintes regras:
 - Não é possível vender mais de **20 itens** idênticos.
 - Compras abaixo de **4 itens** não recebem desconto.
 
-## Contribuição
-Se deseja contribuir para o projeto, siga estes passos:
-1. Crie um branch para sua feature:
-   ```sh
-   git checkout -b minha-feature
-   ```
-2. Faça as alterações e commit:
-   ```sh
-   git commit -m "Adicionando nova funcionalidade"
-   ```
-3. Envie para o repositório remoto:
-   ```sh
-   git push origin minha-feature
-   ```
-4. Abra um **Pull Request** para revisão.
 
 ## Autor
 [Agriton Cunha](https://github.com/agritoncunha)
 
 ---
 
-Esse README cobre a estrutura do projeto, instalação, execução e regras de negócio. Caso precise de ajustes, é só avisar! 🚀
+Esse README cobre a estrutura do projeto, instalação, execução e regras de negócio. 🚀
 
